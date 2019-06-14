@@ -4,7 +4,7 @@
     height: 100%;
     width: 150px;
     background-color: orange;
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;
   }
 
   header nav.mobile-hidden{
@@ -19,14 +19,19 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: green;
+    background-color: gainsboro;
+  }
+
+  header nav ul li{
+    border-bottom: solid black 1px;
+    width: 50%;
   }
 
   header .burger-container{
     display: flex;
     align-items: center;
     height: 65px;
-    background: grey;
+    background: gainsboro;
     padding-left: 8px;
   }
 
