@@ -1,27 +1,32 @@
+
 const App = (function() {
 
-  let hamburgerEl;
-  let navEl;
+  const carousels = ['carousel-products']
 
-  function bindUi(){
-    hamburgerEl = document.getElementById('burger-btn')
-    navEl = document.getElementById('botonera')
+  function start() {
+    console.log('app running');
+    setNavbar()
+    setCarousel()
   }
 
-  function setListeners(){
-    hamburgerEl.addEventListener('click', function(){
-      if (navEl.classList.contains('mobile-hidden')){
-        navEl.classList.remove('mobile-hidden')
-      }else {
-        navEl.classList.add('mobile-hidden')
-      }
+  function setNavbar() {
+    const burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+  }
+
+  function setCarousel() {
+    carousels.forEach(id => {
+      bulmaCarousel.attach(`#${id}`, {
+  			slidesToScroll: 1,
+  			slidesToShow: 4,
+        infinite: true,
+        pagination: false
+  		});
     })
-  }
-
-  function start(){
-    console.log('la aplicacion está corriendo')
-    bindUi()
-    setListeners()
   }
 
   return {
