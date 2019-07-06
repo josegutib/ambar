@@ -8,8 +8,9 @@
     <link href="css/bulma-carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Montserrat:900|Noto+Sans+HK&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="has-background-black">
     <!-- <section class="hero">
       <div class="hero-body">
         <div class="container">
@@ -18,7 +19,36 @@
       </div>
     </section> -->
 
-    <nav class="navbar is-primary">
+    <!-- MODAL -->
+
+    <div style="background-color:green; position:absolute; height:100vh; width:100vw; z-index:1; display:flex; align-items:center; justify-content:center; visibility:hidden;" class="modal-prod">
+      <div class="modl" style=" display:flex; align-items:center; justify-content:center; width:50%">
+        <div class="cua" style="background-color:pink; width:100px; height:100px;">
+          Acá iria la foto del producto
+        </div>
+      </div>
+
+      <div class="modl" style=" display:flex; align-items:center; justify-content:center; width:50%">
+        <div class="cua" style="background-color:pink; width:100px; height:100px;">
+          Acá iría la descripción del producto
+        </div>
+      </div>
+    </div>
+
+    <section class="hero has-background-black">
+      <div class="hero-body">
+        <div class="container logo-container">
+          <img class="img-logo" src="assets/logo3.png" alt="">
+        </div>
+        <!-- <div class="video-container">
+          <video autoplay loop muted>
+            <source src="assets/shrimps.mp4" type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- <nav class="navbar has-background-black">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="#" style="font-weight:bold;">
@@ -39,12 +69,80 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <section class="section">
+      <div class="content is-medium has-text-white">
+        <p>
+          <span style="font-weight:bold">Ambartrade USA</span> is an international frozen fish broker service company located in Bal Harbour-Miami operating directly with Patagonian sea products.
+        </p>
+        <p>
+          <span style="font-weight:bold">We are</span> an integrated business that provides insight to trends and ensuring that our clients receive high quality products at the most competitive prices.
+        </p>
+
+        <p>
+          <span style="font-weight:bold">Our goal</span> is to be a unique an recognized player in the quality fish market
+        </p>
+
+        <p>
+          <span style="font-weight:bold">Our strategy</span> to reach this goal includes:
+        </p>
+
+        <ul>
+          <li>Selecting the most qualified suppliers for each operation.</li>
+          <li>Operating efficiently and responsibly while maintaining fair trade practices.</li>
+          <li>Providing de possibility to develop new products to our customers, allowing the to achieve tangible results.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section grid-container">
+      <div class="container grid-container">
+        <div class="columns has-background-black">
+          <div class="column a product">
+              <img src="assets/squid.jpg" alt="">
+            <h2 class="subtitle has-text-white desc">SQUID</h2>
+          </div>
+
+          <div class="column b product">
+            <img src="assets/shrimp.jpg" alt="">
+            <h2 class="subtitle has-text-white desc">SHRIMP</h2>
+          </div>
+
+          <div class="column c product">
+            <img src="assets/seabass.jpg" alt="">
+            <h2 class="subtitle has-text-white desc">SEA BASS</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+
+
+
+
+    <!-- <div id="modal-desc" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="columns is-multiline">
+          <div class="column is-half" style="margin:0">
+            <figure class="image">
+              <img src="assets/shrimp.jpg" alt="">
+            </figure>
+          </div>
+          <div class="column is-half">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos odio, earum. Excepturi quas, eum quis, aut explicabo architecto nam rem.
+          </div>
+        </div>
+      </div>
+      <button id="btn-modal-close" class="modal-close is-large" aria-label="close"></button>
+  </div> -->
+<!--
+    <section class="section">
       <div class="container">
-        <h1 class="title">We are who we are</h1>
-        <h2 class="subtitle">
+        <h1 class="title has-text-white">Our Mission</h1>
+        <h2 class="subtitle has-text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </h2>
       </div>
@@ -52,8 +150,8 @@
 
     <section class="section">
       <div class="container">
-        <h1 class="title">Our Mission</h1>
-        <h2 class="subtitle">
+        <h1 class="title has-text-white">Our Vision</h1>
+        <h2 class="subtitle has-text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </h2>
       </div>
@@ -61,23 +159,14 @@
 
     <section class="section">
       <div class="container">
-        <h1 class="title">Our Vision</h1>
-        <h2 class="subtitle">
+        <h1 class="title has-text-white">Our Values</h1>
+        <h2 class="subtitle has-text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </h2>
       </div>
-    </section>
+    </section> -->
 
-    <section class="section">
-      <div class="container">
-        <h1 class="title">Our Values</h1>
-        <h2 class="subtitle">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </h2>
-      </div>
-    </section>
-
-    <section class="section">
+    <!-- <section class="section">
 			<div class="container products">
         <h1 class="title">Products</h1>
 				<div id="carousel-products" class="carousel">
@@ -123,10 +212,10 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
     <section class="section">
-      <div class="container">
+      <div class="container is-half">
         <h1 class="title">Contact us</h1>
 
         <div class="field">

@@ -1,8 +1,146 @@
-div.container.products {
-  overflow: hidden;
-
-}
 
 * {
   outline: none;
+}
+
+/* p.logo {
+  color:white;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p.slogan{
+  color:white;
+  font-size: 25px;
+  font-family: 'Grand Hotel', cursive;
+}
+
+div img.net {
+  padding-top: 10px;
+  width: 30%;
+  height: auto;
+}
+
+span.usa{
+  font-family: 'Noto Sans HK', sans-serif;
+}
+
+div.logo-banner{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+div.logo-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.img-logo{
+  width: 50%;
+}
+
+/* video{
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-container{
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+}
+
+.grid-container{
+  max-width: 100%;
+  padding:0;
+  margin:0;
+} */
+
+div.columns{
+  width: 100vw;
+  display:flex;
+}
+
+div.column{
+  padding:0;
+  margin:0;
+  object-fit: cover;
+}
+
+div.column img:hover{
+  opacity: 0.8;
+}
+
+div.column h2.desc{
+  text-align: center;
+  padding: 10px;
+}
+
+/* div.prod-desc{
+  z-index: 10;
+  /* visibility: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+/* div.prod-desc:hover{
+  visibility: visible;
+}  */
+
+/* .modal-content{
+  width: 100vw !important;
+} */
+
+div.modal-prod{
+  visibility: hidden;
+}
+
+div.modl{
+}
+
+div.cua{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+/* .a{
+  background-color: red;
+}
+
+.b{
+  background-color: green;
+}
+
+.c{
+  background-color: blue;
+} */
+
+
+@media (max-width: 500px) {
+  p.logo{
+    font-size: 30px;
+    color:pink;
+  }
+
+  div img.net {
+    width: 80%;
+    height: auto;
+  }
+
+  div.columns{
+    flex-direction: column;
+  }
+
+  img.img-logo{
+    width: 100vw;
 }

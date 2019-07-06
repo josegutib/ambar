@@ -3,10 +3,17 @@ const App = (function() {
 
   const carousels = ['carousel-products']
 
+  let modalEl
+  let productElems
+  let btnModalCloseEl
+  let divProdDescEl
+
   function start() {
     console.log('app running');
-    setNavbar()
-    setCarousel()
+    // setNavbar()
+    // setCarousel()
+    bindUi()
+    setListeners()
   }
 
   function setNavbar() {
@@ -27,6 +34,32 @@ const App = (function() {
         pagination: false
   		});
     })
+  }
+
+  function bindUi(){
+    modalEl = document.getElementById('modal-desc');
+    productElems = document.querySelectorAll('.product');
+    btnModalCloseEl = document.getElementById('btn-modal-close');
+  }
+
+  function setListeners(){
+    productElems.forEach(function(el,i){
+      el.addEventListener('click' , function(){
+        openModal()
+      })
+    })
+
+    btnModalCloseEl.addEventListener('click', function(){
+      closeModal()
+    })
+  }
+
+  function openModal(){
+    modalEl.classList.add('is-active')
+  }
+
+  function closeModal(){
+    modalEl.classList.remove('is-active')
   }
 
   return {
