@@ -1,27 +1,65 @@
+
 const App = (function() {
 
-  let hamburgerEl;
-  let navEl;
+  const carousels = ['carousel-products']
 
-  function bindUi(){
-    hamburgerEl = document.getElementById('burger-btn')
-    navEl = document.getElementById('botonera')
+  let modalEl
+  let productElems
+  let btnModalCloseEl
+  let divProdDescEl
+
+  function start() {
+    console.log('app running');
+    // setNavbar()
+    // setCarousel()
+    bindUi()
+    setListeners()
   }
 
-  function setListeners(){
-    hamburgerEl.addEventListener('click', function(){
-      if (navEl.classList.contains('mobile-hidden')){
-        navEl.classList.remove('mobile-hidden')
-      }else {
-        navEl.classList.add('mobile-hidden')
-      }
+  function setNavbar() {
+    const burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+  }
+
+  function setCarousel() {
+    carousels.forEach(id => {
+      bulmaCarousel.attach(`#${id}`, {
+  			slidesToScroll: 1,
+  			slidesToShow: 4,
+        infinite: true,
+        pagination: false
+  		});
     })
   }
 
-  function start(){
-    console.log('la aplicacion está corriendo')
-    bindUi()
-    setListeners()
+  function bindUi(){
+    modalEl = document.getElementById('modal-desc');
+    productElems = document.querySelectorAll('.product');
+    btnModalCloseEl = document.getElementById('btn-modal-close');
+  }
+
+  function setListeners(){
+    productElems.forEach(function(el,i){
+      el.addEventListener('click' , function(){
+        openModal()
+      })
+    })
+
+    btnModalCloseEl.addEventListener('click', function(){
+      closeModal()
+    })
+  }
+
+  function openModal(){
+    modalEl.classList.add('is-active')
+  }
+
+  function closeModal(){
+    modalEl.classList.remove('is-active')
   }
 
   return {
