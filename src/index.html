@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link href="css/bulma-carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Montserrat:900|Noto+Sans+HK&display=swap" rel="stylesheet">
   </head>
   <body class="has-background-black">
 
     <section class="hero has-background-black">
       <div class="hero-body">
-        <div class="container logo-container">
+        <div class="container has-text-centered">
           <img class="img-logo" src="assets/logo3.png" alt="">
         </div>
       </div>
@@ -45,22 +45,37 @@
       </div>
     </section>
 
-    <section class="section grid-container">
-      <div class="container grid-container">
-        <div class="columns has-background-black">
-          <div class="column a product">
-              <img src="assets/squid.jpg" alt="">
-            <h2 class="subtitle has-text-white desc">SQUID</h2>
-          </div>
+    <section class="section">
+      <div id='product-columns' class="columns is-gapless">
+        <!-- <div class="column">
+          <figure class="image product">
+            <img src="assets/squid.jpg" alt=""></img>
+          </figure>
+          <h2 class="subtitle has-text-white desc">Squid</h2>
+        </div>
 
-          <div class="column b product">
-            <img src="assets/shrimp.jpg" alt="">
-            <h2 class="subtitle has-text-white desc">SHRIMP</h2>
-          </div>
+        <div class="column">
+          <figure class="image product">
+            <img src="assets/shrimp.jpg" alt=""></img>
+          </figure>
+          <h2 class="subtitle has-text-white desc">Shrimp</h2>
+        </div>
+        <div class="column">
+          <figure class="image product">
+            <img src="assets/seabass.jpg" alt=""></img>
+          </figure>
+          <h2 class="subtitle has-text-white desc">Seabass</h2>
+        </div> -->
+      </div>
+    </section>
 
-          <div class="column c product">
-            <img src="assets/seabass.jpg" alt="">
-            <h2 class="subtitle has-text-white desc">SEA BASS</h2>
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="block is-child">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, optio.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -97,20 +112,24 @@
       </div>
     </section>
 
-    <!-- MODAL -->
-
-    <div style="background-color:green; position:absolute; height:100vh; width:100vw; z-index:1; display:flex; align-items:center; justify-content:center;" class="modal-prod">
-      <div class="modl" style=" display:flex; align-items:center; justify-content:center; width:50%">
-        <div class="cua" style="background-color:pink; width:100px; height:100px;">
-          Acá iria la foto del producto
+    <div id='modal-desc' class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-text-white" style="width: 80%">
+        <div class="columns">
+          <div class="column">
+            <figure class="image padded-medium">
+              <img id='modal-product-img' src="assets/squid.jpg" alt=""></img>
+            </figure>
+          </div>
+          <div class="column">
+            <div class="padded-medium">
+              <p id='modal-product-name' class="has-text-weight-bold is-size-2">Shrimp</p>
+              <p id='modal-product-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugiat error reprehenderit vero, atque eveniet ea commodi enim voluptate! Earum ipsam reiciendis, impedit! Delectus, consequuntur nobis omnis minus similique a. Dolore suscipit delectus voluptas laboriosam nesciunt, doloremque nulla itaque obcaecati quam vitae, veritatis aperiam recusandae quia molestias perferendis, magni beatae possimus omnis minima dolor cumque vero. Laboriosam est recusandae voluptatem sit facere, unde provident nesciunt eaque qui placeat, aliquid, assumenda voluptatibus rerum. Molestiae, delectus ipsam dolorum aliquid iste et quia cumque. Labore aspernatur, repellat optio cumque voluptas magnam dolorem fugit quibusdam, neque culpa esse! Impedit adipisci sunt doloribus fuga vero?</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="modl" style=" display:flex; align-items:center; justify-content:center; width:50%">
-        <div class="cua" style="background-color:pink; width:100px; height:100px;">
-          Acá iría la descripción del producto
-        </div>
-      </div>
+      <button id='btn-modal-close' class="modal-close is-large" aria-label="close"></button>
     </div>
 
     <script src="js/bulma-carousel.min.js"></script>

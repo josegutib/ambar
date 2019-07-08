@@ -1,60 +1,79 @@
 
 const App = (function() {
 
-  const carousels = ['carousel-products']
+  const products = [
+    {
+      id: 'product-squid',
+      name: 'Squid',
+      img: 'assets/squid.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, distinctio.'
+    },
+    {
+      id: 'product-shrimp',
+      name: 'Shrimp',
+      img: 'assets/shrimp.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, distinctio.'
+    },
+    {
+      id: 'product-seabass',
+      name: 'Seabass',
+      img: 'assets/seabass.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, distinctio.'
+    }
+  ]
 
   let modalEl
-  let productElems
   let btnModalCloseEl
-  let divProdDescEl
+  let modalProductImgEl
+  let modalProductNameEl
+  let modalProductDescriptionEl
 
   function start() {
     console.log('app running');
-    // setNavbar()
-    // setCarousel()
     bindUi()
+    populate()
     setListeners()
   }
 
-  function setNavbar() {
-    const burger = document.querySelector('.burger');
-        var nav = document.querySelector('#'+burger.dataset.target);
-        burger.addEventListener('click', function(){
-          burger.classList.toggle('is-active');
-          nav.classList.toggle('is-active');
-        });
-  }
+  const Product = props => (`
+    <div class="column">
+      <figure id='${props.id}' class="image is-hoverable-btn is-clickable is-animated-fast">
+        <img src="${props.img}" alt=""></img>
+      </figure>
+      <h2 class="subtitle has-text-white desc">${props.name}</h2>
+    </div>
+  `)
 
-  function setCarousel() {
-    carousels.forEach(id => {
-      bulmaCarousel.attach(`#${id}`, {
-  			slidesToScroll: 1,
-  			slidesToShow: 4,
-        infinite: true,
-        pagination: false
-  		});
+  function populate() {
+    productColumnsEl.innerHTML = products.map(Product).join('\n')
+    products.forEach((product) => {
+      let productEl = document.getElementById(product.id)
+      productEl.addEventListener('click', () => {
+        openModal(product)
+      })
     })
   }
 
   function bindUi(){
     modalEl = document.getElementById('modal-desc');
-    productElems = document.querySelectorAll('.product');
     btnModalCloseEl = document.getElementById('btn-modal-close');
+    productColumnsEl = document.getElementById('product-columns')
+    modalProductImgEl = document.getElementById('modal-product-img')
+    modalProductNameEl = document.getElementById('modal-product-name')
+    modalProductDescriptionEl = document.getElementById('modal-product-description')
   }
 
   function setListeners(){
-    productElems.forEach(function(el,i){
-      el.addEventListener('click' , function(){
-        openModal()
-      })
-    })
 
     btnModalCloseEl.addEventListener('click', function(){
       closeModal()
     })
   }
 
-  function openModal(){
+  function openModal(product){
+    modalProductImgEl.setAttribute('src', product.img)
+    modalProductNameEl.innerHTML = product.name
+    modalProductDescriptionEl.innerHTML = product.description
     modalEl.classList.add('is-active')
   }
 
