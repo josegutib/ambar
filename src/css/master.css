@@ -9,3 +9,7 @@
 .is-animated-fast {
   transition: all 0.2s ease;
 }
+
+.padded-medium {
+  padding: 16px;
+}
