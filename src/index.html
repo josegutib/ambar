@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link href="css/bulma-carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Montserrat:900|Noto+Sans+HK&display=swap" rel="stylesheet">
   </head>
   <body class="has-background-black">
 
     <section class="hero has-background-black">
       <div class="hero-body">
-        <div class="container has-text-centered" style="max-width:400px;">
+        <div id="top" class="container has-text-centered" style="max-width:400px;">
           <img class="img-logo" src="assets/logo3.png" alt="">
         </div>
       </div>
     </section>
+
+<!-- MUENU -->
+    <div class="menu-container" >
+      <div id="x-menu">
+        <ul>
+          <li><a href="#top"><img src="assets/circle-16.png" title="Inicio"></a></li>
+          <li><a href="#product-columns"><img src="assets/circle-16.png" title="Galeria"></a></li>
+          <li><a href="#contact"><img src="assets/circle-16.png" title="Contacto"></a></li>
+        </ul>
+      </div>
+    </div>
 
     <section class="section has-text-centered" >
       <div class="container is-medium has-text-white has-text-justified" style="max-width: 600px" >
@@ -53,8 +64,9 @@
 
     <section class="section">
       <div class="container is-half">
-        <h1 class="title">Do you need quality products?</h1>
+        <h1 id="contact" class="title">Do you need quality products?</h1>
 
+<!-- FORMULARIO -->
         <div class="field">
           <label class="label">First Name</label>
           <div class="control">
@@ -82,6 +94,7 @@
       </div>
     </section>
 
+<!-- MODAL -->
     <div id='modal-desc' class="modal">
       <div class="modal-background"></div>
       <div class="modal-content has-text-white" style="width: 80%; overflow-x:hidden;">
