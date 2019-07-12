@@ -33,10 +33,6 @@ html {
   height: 200px;
 }
 
-#x-menu ul li{
-  background-color: rgba(0,0,0,0.4);
-}
-
 #x-menu ul li:hover{
   opacity: 0.5;
 }
