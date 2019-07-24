@@ -5,7 +5,7 @@ const App = (function() {
     {
       id: 'product-squid',
       name: 'Squid',
-      img: 'assets/squid.jpg',
+      img: 'assets/squid2.jpg',
       // description: ['Species: Molusco', 'Origin:','Fish Method:','Capture Season:', 'Presentation:','Elaboration:']
       description: [
         {
@@ -37,7 +37,7 @@ const App = (function() {
     {
       id: 'product-shrimp',
       name: 'Shrimp',
-      img: 'assets/shrimp.jpg',
+      img: 'assets/shrimp2.jpg',
       description: [
         {
           categoria: 'Species',
