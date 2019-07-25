@@ -8,6 +8,12 @@ html {
   justify-content: center;
 }
 
+#info-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .is-hoverable-btn:hover {
   opacity: 0.8;
 }
